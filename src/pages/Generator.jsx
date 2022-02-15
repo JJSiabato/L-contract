@@ -4,7 +4,7 @@ import { Form, FormR } from '../components/Form'
 
 const Generator = () => {
   return (
-    <div>
+    <div id='content'>
     <Titles><h1>Ingrese información</h1></Titles>
       <Formulario action="">
         <Form/>
