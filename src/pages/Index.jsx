@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Loading from '../components/Loading';
-import Login from '../components/Login';
+import Home from '../pages/Home';
 
 function Index() {
   const [loading, setLoading]=useState(false)
@@ -12,13 +12,8 @@ function Index() {
       }, 1500); 
   },[])
   return (
-    <div > 
-          <Loading/>
-      {loading ?    
-          <Loading/>
-          :        
-          <Login/>
-      }     
+    <div >       
+      {loading ? <Loading/> : <Home/>}     
     </div>
   );
 }

@@ -8,9 +8,7 @@ function App() {
   
   return (
     <div > 
-          {/* <Index/> */}
-          {/* <Home/> */}
-          <ViewPDF/>
+          <Index/>          
     </div>
   );
 }

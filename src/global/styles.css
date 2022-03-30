@@ -212,6 +212,7 @@
     justify-content: center;
     align-items: center;
     font-size: 35px;
+    cursor: pointer;
 }
 .notificationZone{
     display: flex;
@@ -261,7 +262,7 @@
     align-items: center;
     flex-direction: column;
     top: 61px;
-    border: 1px solid #517281;
+    border: 0.5px solid #517281;
     width: 200px;
     right: -100%;
     transition: 0.5s all ease;
@@ -271,9 +272,11 @@
     border-top: none;
     border-right: none;
     z-index: -1;
+    opacity: 90%;
 }
 .menuBar.active{
     right: 0;
+    display: flex;
     
 }
     .menuBar nav{
@@ -366,7 +369,7 @@
 .nav-text{
     display: flex;
     align-items: center;
-    padding: 8px 0px 8px 0px;
+    padding:0px 0px 0px 0px;
     list-style: none;
     height: 60px;
     
@@ -387,12 +390,27 @@
 .nav-text a:hover{
     background-color: #7895A2;
     width: 100%;
+    border-radius: 0 7px 7px 0;
+
     
 }
 .nav-text span{
     margin-left: 16px;
 }
-
+.dropdown{
+    transition: .5s all ease;
+    left: 200px;
+    display: none;
+}
+.dropdown.active{
+    display:block;
+    position: absolute;
+    background-color:rgb(81, 114, 129, 0.95);
+    border-radius: 0 7px 7px 0;
+    left: 200px;
+    width: 200px;
+    padding: 0;
+}
 /****GENERATOR****/
 .workSpace{
    display: flex;

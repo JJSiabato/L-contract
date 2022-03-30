@@ -4,11 +4,13 @@ import SiderBar from '../components/SiderBar'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Generator from './Generator'
 import Setting from './Setting'
-import Latest from './Latest'
+import Lastest from '../components/last/Lastest'
+import { AuthProvider } from '../context/AuthContext'
 
 const Home = () => {
   return (
     <>
+      <AuthProvider>
         <NavBar/>
         <Router>
           <div className='workSpace'>
@@ -17,12 +19,13 @@ const Home = () => {
             <Routes>               
                     <Route path='/' component={<Home/>}/>
                     <Route path='/generator' element={<Generator/>}/>
-                    <Route path='/latest' element={<Latest/>}/>
+                    <Route path='/latest' element={<Lastest/>}/>
                     <Route path='/setting' element={<Setting/>}/>
             </Routes>
             </div>
           </div>   
         </Router>
+      </AuthProvider>
     </>
   )
 }
