@@ -13,11 +13,11 @@ const SiderBar = () => {
 
 return (
     <>
-        <nav  className={show ? 'siderBar' : 'siderBar active'}>
-            <div className={show ?'nav-brand':'nav-brand active'}>
+        <nav  className={show ? 'siderBar active' : 'siderBar'}>
+            <div className={show ? 'nav-brand active':'nav-brand'}>
                <a onClick={()=>setShow(!show)}><MdSwapHorizontalCircle/></a> 
             </div>
-            <ul className={show ? 'siderBar-items' : 'siderBar-items active'}>                
+            <ul className={show ? 'siderBar-items active' : 'siderBar-items'}>                
                 <li className='nav-text'><Link to='/'><MdHome/><span>Inicio</span></Link></li>  
                 <li className='nav-text'><a onClick={()=>setDropdown(!dropdown)}><MdOutlineEditNote/><span>Contrato</span><BiCaretRight/></a></li> 
                         <ul className={dropdown ? 'dropdown  active': 'dropdown'}>

@@ -15,19 +15,22 @@ const Lastest = () => {
                     <th>Monto</th>
                 </tr>
             </thead>
+            <tbody>
            { Data.usuarios.map((elemento)=>{ 
-               return(          
-                <tbody>
+               return(       
                     <tr key={elemento.id}>
                         <td>{elemento.name}</td>
                         <td>{elemento.di}</td>
                         <td>{elemento.phone}</td>
                         <td>{elemento.date}</td>
                         <td>{elemento.amount}</td>
-                    </tr>
-                </tbody>
+                        <td>
+                            <button>Editar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>                
            )})}
-                
+           </tbody>     
         </table>
     </div>
   )

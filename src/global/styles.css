@@ -14,6 +14,10 @@
     font-weight: lighter;
 }
 
+tr{
+    display: block;
+}
+
 .loading{    
     
     background-color: #F37257;
