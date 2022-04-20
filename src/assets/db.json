@@ -1,0 +1,46 @@
+{
+  "usuarios": [
+    {
+      "id": 12457895,
+      "name": "Maria Gonzalez",
+      "phone": 3124567890,
+      "date": "12-02-21",
+      "investment": 12000000
+    },
+    {
+      "id": 23457896,
+      "name": "Juana de Arco",
+      "phone": 3120033225,
+      "date": "12-12-21",
+      "investment": 10000000
+    },
+    {
+      "id": 24563897,
+      "name": "Antonio Nariño",
+      "phone": 3120000000,
+      "date": "10-06-21",
+      "invetment": 20000000
+    },
+    {
+      "id": 235687491,
+      "name": "Simón Bolivar",
+      "phone": 3215869742,
+      "date": "16-08-20",
+      "investment": 15000000
+    },
+    {
+      "id": 325689741,
+      "name": "Ramon Peréz",
+      "phone": 3105638291,
+      "date": "01-03-22",
+      "investment": 17000000
+    },
+    {
+      "id": 912345678,
+      "name": "Pepito Perez",
+      "phone": 3124567890,
+      "date": "12-02-21",
+      "investment": 12000000
+    }
+  ]
+}

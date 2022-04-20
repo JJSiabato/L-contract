@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react'
 import {FormData, FormDataR} from './FormData'
 import {Label, Input, InputGroup, Check} from '../assets/elements'
 
-const Form = () => {
+const Form = (createData, updateData) => {
     const [investment, setInvestment] = useState(0);
     const [rango, setRango] = useState(2.5);
     const [frecuency, setFrecuency] = useState(12);
     const [payTotal, setPayTotal] = useState(0);
     const [cuot, setCuot] = useState(0);
     const [dateForm, setDateForm] = useState({percentage:rango, payFrecuency:frecuency, annualProfit:payTotal, pay:cuot})
-    
     const handleChange = (e)=>{
         setDateForm(
             {   
@@ -19,8 +18,8 @@ const Form = () => {
         )
     }
     const handleSubmit = (e)=>{
-        e.preventDefault();
-        alert("formulario enviado");
+        e.preventDefault();        
+        createData.createData(dateForm);
     }
 
     useEffect(()=>{
@@ -63,8 +62,8 @@ const Form = () => {
                        
                     </td>
                     <td>
-                        <label htmlFor="documentNumber">N. Documento</label>
-                        <input type="number" placeholder='Ej. 12345678912' id='documentNumber' name='documentNumber'/>
+                        <label htmlFor="id">N. Documento</label>
+                        <input type="number" placeholder='Ej. 12345678912' id='id' name='id'/>
                     </td>
                     <td>
                         <label htmlFor="expeditionCity">Lugar de expedición</label>

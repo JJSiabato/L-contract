@@ -1,5 +1,5 @@
 import React from 'react'
-import Data from './dataUser.json'
+import Data from '../../assets/db.json'
 
 const Lastest = () => {
     console.log(Data.usuarios)
@@ -20,10 +20,10 @@ const Lastest = () => {
                return(       
                     <tr key={elemento.id}>
                         <td>{elemento.name}</td>
-                        <td>{elemento.di}</td>
+                        <td>{elemento.id}</td>
                         <td>{elemento.phone}</td>
-                        <td>{elemento.date}</td>
-                        <td>{elemento.amount}</td>
+                        <td>{elemento.dateBirth}</td>
+                        <td>{elemento.investment}</td>
                         <td>
                             <button>Editar</button>
                             <button>Eliminar</button>
