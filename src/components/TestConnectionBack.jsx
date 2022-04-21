@@ -1,20 +1,26 @@
-const baseURL = 'http://192.168.1.8:3001/api/notes'
+import {useEffect, useState} from 'react'
+
+const baseURL = 'http://192.168.1.8:3001/api/notes' || 'https://stark-coast-21200.herokuapp.com'
+
 
 const TestConnectionBack = () => {
-    async function fetchTest (){
-      try{
-        fetch(baseURL)
-        list = await response.json()
-        console.log(list)
-        if(!response.ok) throw {status: response.status};
-      }
-      catch(err){
-        console.log(err)
-      }
+  const [data, setData] = useState([])
+   
+  useEffect(()=>{
+    fetch(baseURL)
+        .then(res => res.json())
+        .then(json => setData(json))
+  },[])
         
-    }
+      
   return ( 
-        fetchTest()
+        <>
+        <ol>
+          {data.map((item) => (
+            <li key={item.id}>{item.city}</li>
+          ))}
+        </ol>
+        </>
   )
 }
 
